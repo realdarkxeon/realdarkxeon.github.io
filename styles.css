@@ -6,6 +6,16 @@
     font-family: 'Inter', sans-serif;
 }
 
+:root {
+    --heading: 2.25rem;
+    --nav-brand: 1.5rem;
+    --subheading: 1.125rem;
+    --card-label: 1.313rem;
+    --common-size: 1.2rem;
+    --spotify-bar: 1.2rem;
+    --sm-link: 1.125rem;
+}
+
 /* Navigation Bar */
 
 #navbar {
@@ -24,7 +34,7 @@
 .nav-item-style {
     margin: 1rem 2rem;
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: var(--common-size);
 }
 
 .nav-brand-style {
@@ -32,7 +42,7 @@
     /* margin-left: 7.5rem; */
     margin-bottom: 0.1rem;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: var(--nav-brand);
 }
 
 /* Playing music on Spotify */
@@ -47,7 +57,7 @@
     color: white;
     text-align: center;
     line-height: 2rem;
-    font-size: 1.2rem;
+    font-size: var(--spotify-bar);
     font-weight: 400;
     margin: auto;
 }
@@ -55,7 +65,7 @@
 /* Introduction */
 
 section {
-    width: 75%;
+    width: 65%;
     margin: 100px auto;
 }
 
@@ -72,7 +82,7 @@ section {
 
 h1 {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: var(--heading);
     margin: 25px 0;
 }
 
@@ -84,14 +94,22 @@ h1 {
 }
 
 .inter-medium-gray {
-    font-size: 1.375rem;
+    font-size: var(--subheading);
     font-weight: 500;
     color: black;
     opacity: 0.7;
-    width: 42.25rem;
+    width: 40rem;
 }
 
 /* About me */
+
+.describe-style {
+    font-size: var(--subheading);
+    font-weight: 500;
+    color: black;
+    opacity: 0.7;
+    width: 35rem;
+}
 
 .about-me {
     display: flex;
@@ -102,8 +120,8 @@ h1 {
 #rectangle {
     background-color: #1ED760;
     border-radius: 0.625rem;
-    height: 35rem;
-    width: 25rem;
+    height: 28rem;
+    width: 21rem;
 }
 
 /* What do I do? */
@@ -112,14 +130,14 @@ h1 {
     display: grid;
     grid-template-columns: 29rem 29rem;
     grid-template-rows: 6rem 6rem;
-    margin: 3rem 0;
+    margin: 1.5625rem 0;
 }
 
 .hobby-item {
     height: 5.313rem;
     width: 28.125rem;
     font-weight: 500;
-    font-size: 1.313rem;
+    font-size: var(--card-label);
     border-radius: 0.625rem;
     background-color: #ffffff;
     text-align: left;
@@ -131,6 +149,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* margin: 10px 5px; */
 }
 
 .item-label {
@@ -151,10 +170,12 @@ h1 {
 .social-media-part > div {
     display: flex;
     align-items: center;
+    justify-content: baseline;
 }
 
 .social-media-part {
     margin-left: 10%;
+    margin-top: 1%;
 }
 
 .form-entries {
@@ -162,7 +183,7 @@ h1 {
     background-color: #C4C4C44D;
     height: 41px;
     width: 400px;
-    font-size: 20px;
+    font-size: var(--common-size);
     font-weight: 400;
     padding-left: 1rem;
     border-width: 0;
@@ -185,7 +206,7 @@ h1 {
     background-color: #1ED760;
     height: 41px;
     width: 400px;
-    font-size: 20px;
+    font-size: var(--common-size);
     font-weight: 700;
     color: #ffffff;
     border-width: 0;
@@ -197,7 +218,7 @@ h1 {
 
 .inter-regular-black {
     font-weight: 400;
-    font-size: 18px;
+    font-size: var(--sm-link);
     color: #000000;
     margin-left: 2rem;
 }
@@ -219,12 +240,12 @@ hr {
 }
 
 footer {
-    width: 75%;
+    width: 65%;
     margin: 2rem auto;
 }
 
 .footer-text {
-    font-size: 20px;
+    font-size: var(--common-size);
     font-weight: 500;
     color: black;
     opacity: 0.7;
@@ -232,9 +253,13 @@ footer {
     display: inline;
 }
 
+#footer-text-size {
+    font-size: 1rem;
+}
+
 .inter-bold-gray {
     font-weight: 700;
-    font-size: 20px;
+    font-size: var(--common-size);
     color: black;
     opacity: 0.7;
     display: inline;
