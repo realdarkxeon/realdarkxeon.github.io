@@ -129,13 +129,14 @@ h1 {
 .hobbies {
     display: grid;
     grid-template-columns: 29rem 29rem;
-    grid-template-rows: 6rem 6rem;
+    grid-template-rows: auto auto;
     margin: 1.5625rem 0;
 }
 
 .hobby-item {
     height: 5.313rem;
     width: 28.125rem;
+    margin: 7px 0;
     font-weight: 500;
     font-size: var(--card-label);
     border-radius: 0.625rem;
@@ -144,22 +145,95 @@ h1 {
     padding-left: 2rem;
     padding-right: 2rem;
     cursor: pointer;
+
     box-shadow: 0px 5px 24px rgba(0, 0, 0, 0.3);
     border-width: 0;
+    /* border-style: solid;
+    border-color: #1ED760; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* margin: 10px 5px; */
+    transition: 0.4s;
+}
+
+.active-accordion, .hobby-item:hover {
+    background-color: #1ED760;
+    color: white;
+
+    /* border-radius: 0; */
+    /* border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; */
+}
+
+.active-accordion::after {
+    content: url("angle-right-white.svg");
+    transform: rotate(90deg);
+    transition: 0.1s;
+}
+
+.hobby-item::after {
+    content: url("angle-right-white.svg");
+    width: 20px;
+    height: 20px;
+    color: #000000;
+    transition: 0.1s;
+}
+
+#know-more {
+    padding: 20px 2rem;
+    display: none;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.7);
+    /* opacity: 0.7; */
+    height: 10rem;
+    width: 28.125rem;
+
+    box-shadow: 0px 5px 24px rgba(0, 0, 0, 0.3);
+    border-width: 0;
+    border-width: 0px;
+    /* border-style: solid;
+    border-color: #1ED760; */
+    border-radius: 0.625rem;
+    /* border-top-left-radius: 0;
+    border-top-right-radius: 0; */
+    border-top: #ffffff;
+    
+    margin-bottom: 10px;
+}
+
+.about-hobby {
+    border-radius: 0.3rem;
+    background-color: #1ED760;
+    height: 2rem;
+    width: 7.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    border-width: 0;
+    margin-bottom: 10px;
+}
+
+.about-hobby:hover::after {
+    content: " »";
+    position: relative;
+    right: 1%;
+    opacity: 1;
+    transition: 0.5s ease;
 }
 
 .item-label {
     margin-bottom: 0;
 }
 
-#angle-right {
+/* #angle-right {
     width: 20px;
     height: 20px;
-}
+} */
 
 /* Contact me */
 
